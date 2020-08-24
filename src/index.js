@@ -1,12 +1,42 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+import Button from "@material-ui/core/Button";
 import * as serviceWorker from './serviceWorker';
+import FizzBuzz from './components/FizzBuzz';
+
+// const App = () => {
+//   const [counter, setCounter] = useState(1);
+
+//   useEffect(() => {
+//     console.log("counter", counter);
+//   }, [counter]);
+
+//   const checkCounter = () => {};
+
+//   const incrementCounter = () => {
+//     setCounter(counter++);
+//   };
+
+//   const decrementCounter = () => {
+//     setCounter(counter--);
+//   };
+
+//   return (
+//     <div>
+//       <Button variant="contained" color="primary" onClick={incrementCounter}>
+//         Increment
+//       </Button>
+//       <Button variant="contained" color="primary" onClick={decrementCounter}>
+//         Decrement
+//       </Button>
+//     </div>
+//   );
+// };
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FizzBuzz />
   </React.StrictMode>,
   document.getElementById('root')
 );
