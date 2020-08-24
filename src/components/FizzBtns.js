@@ -15,14 +15,16 @@ const FizzBtns = (props) => {
 
   useEffect(() => {
     checkCounter();
-  });
+  }, [counter]);
 
   const incrementCounter = () => {
     setCounter(counter + 1);
   };
 
   const decrementCounter = () => {
-    setCounter(counter - 1);
+    if (counter !== 1) {
+      setCounter(counter - 1);
+    }
   };
 
   /**
@@ -43,7 +45,7 @@ const FizzBtns = (props) => {
 
   return (
     <Grid container item xs={12}>
-      <Grid className={classes.buttons} item xs={6} >
+      <Grid className={classes.buttons} item xs={6}>
         <Button variant="contained" color="primary" onClick={incrementCounter}>
           Increment
         </Button>

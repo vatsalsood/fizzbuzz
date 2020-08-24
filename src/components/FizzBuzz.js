@@ -19,7 +19,7 @@ const FizzBuzz = () => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>{fizzText}</Paper>
         </Grid>
-        <FizzBtns setFizzText={setFizzText}/>
+        <FizzBtns setFizzText={setFizzText} />
       </Grid>
     </div>
   );
